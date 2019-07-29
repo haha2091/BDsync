@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<!-- 从中间库查询人事信息 -->
+	<entry key="getPersonCount">select count(*) from midPersonnel</entry>
+	<entry key="getPersonInfoAll_oracle">select * from midPersonnel</entry>
+	<entry key="getPersonInfoForPage_oracle">select * from (select p.*, ROWNUM ROW from
+		midPersonnel p where ROW <= ?) where ROW >= ? </entry>
+	<!-- 从中间库查询卡信息 -->
+	<entry key="getCardCount">select count(*) from midCard</entry>
+	<entry key="getCardInfoAll_oracle">select * from midCard</entry>
+	<entry key="getCardInfoForPage_oracle">select * from (select c.*, ROWNUM ROW from midCard c
+		where ROW <= ?) where ROW >= ? </entry>
+	<!-- 从中间库查询黑名单信息midBlackCardList -->
+	<entry key="getBlackCardListCount">select count(*) from midBlackCardList</entry>
+	<entry key="getBlackCardListInfoAll_oracle">select * from midBlackCardList</entry>
+	<entry key="getBlackCardListInfoForPage_oracle">select * from (select b.*, ROWNUM ROW from
+		midBlackCardList b where ROW <= ?) where ROW >= ? </entry>
+</properties>
